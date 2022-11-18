@@ -14,39 +14,58 @@
         android:layout_margin="20dp"
         android:gravity="center"
         android:text="Text"
-        android:textSize="30sp"
-        />
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/edit_text"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:inputType="text|textMultiLine"
-        android:gravity="top"/>
+        android:hint="Enter items desc"
+        android:gravity="top"
+        android:inputType="text|textMultiLine" />
 
 
-    <Button
-        android:id="@+id/buttonAdd"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
 
-        />
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Add"
 
-    <Button
-        android:id="@+id/buttonUpdate"
+            />
+
+        <Button
+            android:id="@+id/buttonUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:onClick="buttonUpdate"
+            android:text="Update" />
+
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:onClick="buttonDel"
+            android:text="Delete" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Update"
-        android:onClick="buttonUpdate"
-        />
-    <Button
-        android:id="@+id/buttonDelete"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Delete"
-        android:onClick="buttonDel"
-        />
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        tools:layout_editor_absoluteY="316dp" />
 
     <TextView
         android:id="@+id/selectedItem"
@@ -54,15 +73,6 @@
         android:textSize="30dp"
         android:layout_height="wrap_content"
         />
-
-
-
-        <ListView
-            android:id="@+id/list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteY="316dp" />
-
 
 
 </LinearLayout>
