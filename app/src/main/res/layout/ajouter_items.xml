@@ -18,5 +18,12 @@
         android:layout_height="150dp"
         android:inputType="text|textMultiLine"
         android:gravity="top"/>
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:onClick="buttonClick"
+        />
 
 </LinearLayout>
