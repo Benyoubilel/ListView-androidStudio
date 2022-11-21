@@ -3,6 +3,7 @@ package com.example.list;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -46,6 +47,7 @@ public class MainActivity<adapterView> extends AppCompatActivity {
                     myAdapter.notifyDataSetChanged();
                     inputText1.setText("");
                     Toast.makeText(MainActivity.this, "data added", Toast.LENGTH_SHORT).show();
+
                 } else {
                     Toast.makeText(MainActivity.this, "input is empty!!", Toast.LENGTH_SHORT).show();
                 }
@@ -59,6 +61,7 @@ public class MainActivity<adapterView> extends AppCompatActivity {
                 String value = adapterView.getItemAtPosition(i).toString();
                 item = adapterView.getItemAtPosition(i).toString() + " is selectes";
                  indexVal = i;
+                listeView1.getChildAt(i).setBackgroundColor(Color.RED);
                 Toast.makeText(MainActivity.this, item, Toast.LENGTH_SHORT).show();
                 inputText1.setText(value);
 
